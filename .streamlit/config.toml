@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor = "#F39C12"
+backgroundColor = "#d6c5b2"
+secondaryBackgroundColor = "#2E2E2E"
+textColor = "#3e2f1c"
+font = "merriweather"

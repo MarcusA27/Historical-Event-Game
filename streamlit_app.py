@@ -2,6 +2,10 @@ import pandas as pd
 import streamlit as st
 import time
 
+
+if "streak" not in st.session_state:
+    st.session_state.streak = 0
+
 df = pd.read_csv('World Important Dates.csv')
 pd.set_option("display.max_columns", None)
 df = df.drop(["Outcome", "Important Person/Group Responsible", "Affected Population", "Place Name"], axis=1)
@@ -20,27 +24,31 @@ for events in df_filtered:
     if abs(date_2 - date_1) <= 21:
         break
 
-
 with st.container():
+
     st.image('https://mtv-main-assets.mountvernon.org/files/styles/original/s3/callouts/surrendering-his-commission-web-4.jpg.webp?VersionId=349ROqBSKJY.oG982oe1BcVzWZKs6nzc&itok=Agt9F4CR')
-    st.subheader("What Came First?")
+    st.subheader("Which Historical Event Came First?")
     st.divider()
 
 with st.container():
-
+    st.write(f"Streak: {st.session_state.streak}")
     def check_one():
         if date_1 > date_2:
             col1.write("Correct")
+            st.session_state.streak +=1
 
         else:
             col1.write("Incorrect")
+            st.session_state.streak = 0
 
     def check_two():
         if date_2 > date_1:
             col1.write("Correct")
+            st.session_state.streak += 1
 
         else:
             col1.write("Incorrect")
+            st.session_state.streak = 0
 
 
     col1, col2 = st.columns([1, 1])
@@ -49,7 +57,4 @@ with st.container():
 
 
 
-
-
-# st.text(f"{check(guess)}\n\n")
 
