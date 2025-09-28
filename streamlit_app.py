@@ -40,19 +40,27 @@ with st.container():
     def check_one():
         if date_1 > date_2:
             col1.write("Correct")
+            col1.write(date_1)
+            col1.write(date_2)
             st.session_state.streak +=1
 
         else:
             col1.write("Incorrect")
+            col1.write(date_1)
+            col1.write(date_2)
             st.session_state.streak = 0
 
     def check_two():
         if date_2 > date_1:
             col1.write("Correct")
+            col1.write(date_1)
+            col1.write(date_2)
             st.session_state.streak += 1
 
         else:
             col1.write("Incorrect")
+            col1.write(date_1)
+            col1.write(date_2)
             st.session_state.streak = 0
 
 
