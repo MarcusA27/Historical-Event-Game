@@ -1,6 +1,6 @@
 ### Event Guessing Game
 
-👉 [Click here to play the game!](https://marcusa27-historical-event-game-streamlit-app-nvkqb3.streamlit.app/)
+👉 [Click here to play the game!](https://historical-event-game.streamlit.app)
 
 - Takes 2 random events that are **within 20 years of eachother** from a dataset
 - Asks the user which came first
