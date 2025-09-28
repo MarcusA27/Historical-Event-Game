@@ -22,7 +22,8 @@ for events in df_filtered:
 
 
 with st.container():
-    st.image('https://mtv-main-assets.mountvernon.org/files/styles/original/s3/callouts/surrendering-his-commission-web-4.jpg.webp?VersionId=349ROqBSKJY.oG982oe1BcVzWZKs6nzc&itok=Agt9F4CR')    st.subheader("What Came First?")
+    st.image('https://mtv-main-assets.mountvernon.org/files/styles/original/s3/callouts/surrendering-his-commission-web-4.jpg.webp?VersionId=349ROqBSKJY.oG982oe1BcVzWZKs6nzc&itok=Agt9F4CR')
+    st.subheader("What Came First?")
     st.divider()
 
 with st.container():
