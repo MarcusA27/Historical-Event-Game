@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import time
 
-df = pd.read_csv('/Users/marcusarocha/Downloads/World Important Dates.csv')
+df = pd.read_csv('World Important Dates.csv')
 pd.set_option("display.max_columns", None)
 df = df.drop(["Outcome", "Important Person/Group Responsible", "Affected Population", "Place Name"], axis=1)
 df_filtered = df[df["Date"].str.isnumeric()]

@@ -1,4 +1,5 @@
 import pandas as pd
+import
 
 df = pd.read_csv('/Users/marcusarocha/Downloads/World Important Dates.csv')
 pd.set_option("display.max_columns", None)
@@ -36,8 +37,7 @@ while gameLoop:
     print("===============================\n")
 
     print(f"01. {random_row1["Name of Incident"].iloc[0]}")
-    print(f"02. {random_row2["Name of Incident"].iloc[0]}")
-    print("")
+    print(f"02. {random_row2["Name of Incident"].iloc[0]}\n")
 
     guess = input("Your Guess (1/2): ")
     print(f"{check(guess)}\n\n")
