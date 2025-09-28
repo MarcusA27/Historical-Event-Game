@@ -38,7 +38,7 @@ with st.container():
 with st.container():
     st.write(f"Streak: {st.session_state.streak}")
     def check_one():
-        if date_1 > date_2:
+        if date_1 < date_2:
             col1.write("Correct")
             col1.write(date_1)
             col1.write(date_2)
@@ -51,7 +51,7 @@ with st.container():
             st.session_state.streak = 0
 
     def check_two():
-        if date_2 > date_1:
+        if date_2 < date_1:
             col1.write("Correct")
             col1.write(date_1)
             col1.write(date_2)
