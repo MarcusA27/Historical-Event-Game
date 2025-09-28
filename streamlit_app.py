@@ -2,6 +2,11 @@ import pandas as pd
 import streamlit as st
 import time
 
+st.set_page_config(
+    page_title="Event Guesser",   # Title that shows in the browser tab
+    page_icon="🎮",        # Can be emoji or path to an image file
+    layout="centered",     # Optional: "centered" or "wide"
+)
 
 if "streak" not in st.session_state:
     st.session_state.streak = 0
