@@ -22,10 +22,10 @@ df_filtered['Name of Incident'] = df_filtered['Name of Incident'].str.replace('U
 for events in df_filtered:
 
     random_row1 = df_filtered.sample(n=1)
-    event_1 = {random_row1["Name of Incident"].iloc[0]}
+    event_1 = random_row1["Name of Incident"].iloc[0]
     date_1 = int(random_row1["Year"].iloc[0])
     random_row2 = df_filtered.sample(n=1)
-    event_2 = {random_row2["Name of Incident"].iloc[0]}
+    event_2 = random_row2["Name of Incident"].iloc[0]
     date_2 = int(random_row2["Year"].iloc[0])
 
     if abs(date_2 - date_1) <= 21:
